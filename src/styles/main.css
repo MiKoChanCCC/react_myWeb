@@ -1,0 +1,480 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: auto;
+    color: white;
+    text-shadow: 0 0 .5rem var(--bgColor);
+}
+
+.header.style2 {
+    position: relative;
+    background: white;
+    color: #333;
+    text-shadow: none;
+}
+
+.header .logo {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+
+.header .logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.header .logo a:hover {
+    color: var(--bgColor);
+    text-shadow: 0 0 .0625rem black;
+}
+
+.header .logo h1 {
+    font-size: 1.625rem;
+    letter-spacing: .9375rem;
+    font-weight: bold;
+}
+
+.header .logo h2 {
+    font-size: 1.25rem;
+    letter-spacing: .5rem;
+    font-weight: bold;
+    margin-top: .9375rem;
+}
+
+.header.style2 .logo {
+    color: var(--bgColor);
+}
+
+.header .nav {
+    border-bottom: .0625rem solid #ddd;
+}
+
+.header.style2 .nav {
+    border-color: var(--bgColor);
+}
+
+.header .nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+
+.header .nav ul a {
+    padding-bottom: 1.875rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header .nav ul a::after {
+    content: "";
+    width: 0;
+    height: .1875rem;
+    background: white;
+    position: absolute;
+    bottom: -0.125rem;
+    transition: all 0.3s ease;
+}
+
+.header.style2 .nav ul a::after {
+    background: var(--bgColor);
+}
+
+.header.style2 .nav ul li.active a,
+.header.style2 .nav ul a.active,
+.header.style2 .nav ul a:hover {
+    color: var(--bgColor);
+}
+
+.header .nav ul li.active a::after,
+.header .nav ul a.active::after,
+.header .nav ul a:hover::after {
+    width: 100%;
+}
+
+.header .nav .applink {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.header .nav .applink a {
+    width: 1.875rem;
+    height: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bgColor);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 .25rem var(--bgColor);
+}
+
+.header.style2 .nav .applink a {
+    color: white;
+}
+
+.header .nav .applink .iconfont {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.header .nav .applink a:hover {
+    transform: scale(1.2);
+}
+
+.banner a {
+    font-size: 0;
+    position: relative;
+    display: block;
+}
+
+.banner a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.banner img {
+    width: 100%;
+    height: 46.875rem;
+    object-fit: cover;
+}
+
+.akiswiper .swiper-pagination span {
+    width: .625rem;
+    height: .625rem;
+    background: white;
+    opacity: 1;
+    border: .0625rem solid var(--bgColor);
+}
+
+.akiswiper .swiper-pagination span.swiper-pagination-bullet-active {
+    background: var(--bgColor);
+}
+
+.akiswiper .swiper-button-next,
+.akiswiper .swiper-button-prev {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.akiswiper:hover .swiper-button-next,
+.akiswiper:hover .swiper-button-prev {
+    opacity: 1;
+}
+
+/* 轮播样式及动画 */
+
+.index-about {
+    padding: 5rem 0 3.75rem;
+    background: rgb(247, 247, 247);
+}
+
+.index-about .container {
+    display: flex;
+}
+
+.index-about img {
+    width: 23.75rem;
+    height: 32.5rem;
+    object-fit: cover;
+}
+
+.index-about .txt {
+    width: calc(100% - 23.75rem);
+    padding-left: 1.875rem;
+}
+
+.index-about .txt .user {
+    margin-top: 3.125rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-about .txt .user .once {
+    width: 50%;
+    margin-bottom: 1.875rem;
+    display: flex;
+    align-items: center;
+}
+
+.index-about .txt .user .once .iconfont {
+    font-size: 2.75rem;
+    color: var(--bgColor);
+    margin-right: 1.25rem;
+}
+
+.index-about .txt .user .once .name {
+    font-size: 1.125rem;
+    margin-bottom: .9375rem;
+}
+
+.index-about .txt .user .once .desc {
+    font-size: .875rem;
+    color: #666;
+}
+
+.index-about .txt .content {
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.index-about .txt .content p {
+    margin-bottom: .9375rem;
+}
+
+/* 介绍样式 */
+
+.footer {
+    background: rgb(35, 35, 35);
+    color: white;
+    padding: 3.75rem;
+    text-align: center;
+}
+
+.footer .logo {
+    margin-bottom: 1.875rem;
+}
+
+.footer .logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.footer .logo a:hover {
+    color: var(--bgColor);
+    text-shadow: 0 0 .0625rem black;
+}
+
+.footer .logo h1 {
+    font-size: 1.825rem;
+    letter-spacing: .9375rem;
+    font-weight: bold;
+}
+
+.footer .logo h2 {
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    font-weight: bold;
+    margin-top: .9375rem;
+}
+
+.footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.875rem;
+}
+
+.footer ul a {
+    padding: 0 1.25rem;
+    font-size: 1rem;
+    display: block;
+    border-right: .0625rem solid white;
+}
+
+.footer ul li:last-child a {
+    border: none;
+}
+
+.footer .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .875rem;
+    margin-bottom: .9375rem;
+}
+
+.footer .contact .iconfont {
+    margin-right: .75rem;
+}
+
+.footer .cop {
+    font-size: 1rem;
+    margin-top: 3.125rem;
+    padding-top: 1.875rem;
+    border-top: .0625rem solid #ddd;
+    color: #999;
+}
+
+.footer a {
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--bgColor);
+}
+
+.page-hobby {
+    padding: 5rem 0;
+}
+
+.page-hobby .item-all {
+    display: flex;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+    margin-top: 3.125rem;
+}
+
+.page-hobby .item-all a {
+    display: block;
+    width: calc(33.33% - 1.25rem);
+    position: relative;
+    height: 17.5rem;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.page-hobby .item-all a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-hobby .item-all a .layer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: white;
+    padding: 0 .875rem;
+    transform: translateY(calc(100% - 3.625rem));
+    background: var(--bgColor2);
+    transition: all 0.5s ease;
+}
+
+.page-hobby .item-all a:hover .layer {
+    transform: translateY(0);
+}
+
+.page-hobby .item-all a .layer .title {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    border-bottom: .0625rem solid #ddd;
+    height: 3.75rem;
+}
+
+.page-hobby .item-all a .layer .desc {
+    padding-top: .625rem;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+
+.page-photo {
+    padding: 5rem 0;
+}
+
+.page-photo .item-all {
+    margin-top: 3.125rem;
+}
+
+.page-photo .item-all>div {
+    display: flex;
+}
+
+.page-photo .item-all .style2s .img {
+    width: calc(50% + 1.625rem);
+    height: 25rem;
+    margin: 0 .3125rem .625rem;
+}
+
+.page-photo .item-all .style3s .img {
+    width: calc(33.33% + 1.625rem);
+    height: 21.875rem;
+    margin: 0 .3125rem .625rem;
+}
+
+/* 视频排版 */
+
+.page-photo .item-all .img {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.page-photo .item-all .img {
+    overflow: hidden;
+    position: relative;
+}
+
+.page-photo .item-all .img .layer {
+    padding: .9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background: var(--bgColor2);
+    color: white;
+    line-height: 1.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.page-photo .item-all .img:hover .layer {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.page-photo .item-all img,
+.page-photo .item-all video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+}
+
+.page-photo .item-all .img:hover img {
+    transform: scale(1.1);
+}
+
+/* 视频描述动画 */
+
+
+.fontSize{
+    font-size: 4rem;
+}
+
+.fontSize1{
+    font-size: 2.35rem;
+}
+
+.fontSize2{
+    font-size: 2rem;
+}
+
+.fontSize-footer{
+    font-size: 1.25rem;
+}

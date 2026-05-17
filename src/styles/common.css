@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+
+@font-face {
+    font-family: "abcfont";
+    src: url("../assets/fonts/zaozigongfangnaisiti.ttf");
+}
+
+
+i {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+html {
+    font-size: 1rem;
+    color: black;
+    font-family: "abcfont";
+    --bgColor: rgb(205, 86, 86);
+    --bgColor2: rgb(205, 86, 86, 0.7);
+    /* 主题颜色 */
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    transition: all .4s ease;
+}
+
+
+.container {
+    box-sizing: border-box;
+    width: 75rem;
+    margin: 0 auto;
+}
+
+.index-title {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+}
+
+.index-bottom {
+    font-size: .875rem;
+    text-transform: capitalize;
+    color: #666;
+    margin-top: .9375rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* title小字样式 */
+
+.index-title.center {
+    text-align: center;
+}
+
+.bg-banner {
+    height: auto;
+    position: relative;
+    font-size: 0;
+}
+
+.bg-banner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    background: rgb(0, 0, 0, 0.3);
+}
+
+
+.bg-banner img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bg-banner h3 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-shadow: 0 0 .5rem var(--bgColor);
+}
+
+/* 分页标题 */
+
+.route {
+    padding: .875rem 0;
+    border-bottom: .0625rem solid #ececec
+}
+
+.route .container {
+    padding: 0rem;
+}
+
+.route ul {
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.route ul>li {
+    float: left;
+    position: relative;
+    padding-right: 1.25rem;
+}
+
+.route ul>li a img {
+    width: 6.25rem;
+}
+
+.route ul>li a {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding: 0 .625rem;
+    color: #333;
+    letter-spacing: .02rem
+}
+
+
+.route ul>li::after {
+    content: "";
+    top: .75rem;
+    right: .45rem;
+    width: .4rem;
+    height: .4rem;
+    position: absolute;
+    border-left: .0938rem solid #000000;
+    border-bottom: .0938rem solid #000000;
+    transform: translate(0, -50%) rotate(-135deg)
+}
+
+/* 增加网页导航标 */
+
+.route ul>li:last-child::after {
+    border: none
+}
+
+/* 停止网页导航标生成 */
+
+.video-container {
+    display: inline-block;
+    position: relative;
+    height: 16.875rem;
+}
+
+.video-preview {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+
+.video-smallphoto {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.video-container:hover .video-smallphoto {
+    display: none;
+}
+
+.video-container:hover .video-preview {
+    display: block;
+}
+
+.pMargin {
+    margin-top: .625rem;
+}
